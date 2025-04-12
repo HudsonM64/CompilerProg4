@@ -33,7 +33,7 @@ public class MipsFrame extends Frame {
   public Access allocLocal(boolean escape) { 
     if (escape) {
       this.offset -= 4;
-      return new InFram(this.offset);
+      return new InFrame(this.offset);
     }
     else {
       return new InReg(new Temp());

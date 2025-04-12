@@ -93,7 +93,7 @@ public class FindEscape {
   //for let expressions
   void traverseExp(int depth, Absyn.LetExp e) {
     escEnv.beginScope();
-    for (Absyn.DecList dec = e.decs; dec != null; dec = dec.tail)
+    for (Absyn.DeclarationList dec = e.decs; dec != null; dec = dec.tail)
       traverseDec(depth, dec.head);
     traverseExp(depth, e.body);
     escEnv.endScope();
